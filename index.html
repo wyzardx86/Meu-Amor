@@ -3,16 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Para o Amor da Minha Vida ❤️</title>
+  <title>Para o Amor da Minha Vida ❤️ • Primeiro Amor</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Floating background particles -->
+  <!-- Floating background hearts & musical notes -->
   <div class="hearts-container" id="heartsContainer"></div>
+
+  <!-- Music Sound Notification Banner (Top) -->
+  <div class="music-banner" id="musicBanner">
+    <div class="banner-content">
+      <span class="banner-icon">🎵</span>
+      <div class="banner-text">
+        <strong>Nossa Trilha Sonora:</strong>
+        <span>Desejo de Menina • Primeiro Amor</span>
+      </div>
+      <button class="banner-play-btn" id="bannerPlayBtn">Ouvir Música 🔊</button>
+    </div>
+  </div>
 
   <!-- Main Container -->
   <main class="feed-wrapper">
@@ -39,7 +51,7 @@
           </div>
         </div>
 
-        <button class="options-btn" id="musicToggleBtn" title="Tocar música romântica">
+        <button class="options-btn" id="musicHeaderToggle" title="Tocar / Pausar som">
           <svg class="music-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M9 18V5l12-2v13"></path>
             <circle cx="6" cy="18" r="3"></circle>
@@ -126,39 +138,90 @@
         <div class="live-counter">❤️ <span id="likesNumber">999.999</span> corações apaixonados</div>
       </div>
 
+      <!-- TOP-TIER SPOTIFY STYLE MUSIC PLAYER -->
+      <div class="music-card-top" id="musicCard">
+        <div class="music-card-header">
+          <div class="vinyl-wrapper" id="vinylBtn" title="Clique para tocar">
+            <div class="vinyl-disc" id="vinylDisc">
+              <div class="vinyl-art"></div>
+              <div class="vinyl-center"></div>
+            </div>
+            <div class="vinyl-pulse"></div>
+          </div>
+
+          <div class="song-info">
+            <div class="song-title-row">
+              <span class="song-badge">TRILHA DO NOSSO AMOR</span>
+            </div>
+            <h4 class="song-name">Primeiro Amor</h4>
+            <p class="song-artist">Desejo de Menina</p>
+            
+            <!-- Dynamic Lyrics Ticker -->
+            <div class="lyrics-ticker" id="lyricsTicker">
+              <span class="ticker-quote">"</span>
+              <span class="ticker-text" id="tickerText">Quando estou com você, tudo fica mais bonito...</span>
+              <span class="ticker-quote">"</span>
+            </div>
+          </div>
+
+          <div class="player-controls">
+            <button class="play-circle-btn" id="mainPlayBtn" title="Play/Pause">
+              <svg class="play-icon" id="playSvg" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <svg class="pause-icon" id="pauseSvg" viewBox="0 0 24 24" fill="currentColor" style="display:none;">
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Audio Progress Bar, Timer & Soundwaves -->
+        <div class="player-footer">
+          <div class="sound-wave-top" id="soundWave">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+
+          <div class="time-and-bar">
+            <div class="progress-bar-container" id="progressBarContainer">
+              <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="time-display">
+              <span id="currentTime">0:00</span>
+              <span id="durationTime">3:49</span>
+            </div>
+          </div>
+
+          <div class="music-actions-sub">
+            <button class="clip-toggle-btn" id="openClipBtn">🎬 Ver Clipe</button>
+          </div>
+        </div>
+      </div>
+
       <!-- Caption & Message -->
       <div class="post-caption">
         <p class="caption-text">
           <strong class="caption-user">meu_grande_amor</strong>
           <span>
-            Eu só queria te lembrar do quanto <strong>eu te amo</strong>! Cada sorriso seu ilumina meu dia por inteiro. Estar ao seu lado é o melhor lugar do mundo, e a única certeza que carrego comigo é a de que eu quero estar com você hoje, amanhã e em cada pedacinho do nosso futuro. 💖🌹
+            "Quando estou com você, tudo fica mais bonito... O que era preto e branco fica colorido. Quando estou com você sou mais feliz, eu posso dizer que é meu primeiro amor!" ❤️🎶
           </span>
         </p>
 
         <p class="caption-promises">
-          "Você não é apenas o meu amor, é minha paz, minha certeza e meu porto seguro. Obrigado por ser quem você é."
+          Eu te amo com todas as minhas forças. Cada segundo ao seu lado é um presente e eu sempre, sempre quero estar com você, cuidando de você e te fazendo a mulher mais feliz do mundo. 💍🌹
         </p>
 
         <div class="hashtags">
+          <span>#PrimeiroAmor</span>
+          <span>#DesejoDeMenina</span>
           <span>#TeAmoMuito</span>
           <span>#SempreAoSeuLado</span>
-          <span>#MeuAmor</span>
-          <span>#DonaDoMeuCoracao</span>
-          <span>#ParaSempreNos</span>
+          <span>#MinhaVida</span>
+          <span>#AmorEterno</span>
         </div>
 
-        <div class="music-player-pill" id="musicPlayer">
-          <div class="disc-icon playing">🎵</div>
-          <div class="song-details">
-            <span class="song-title">Nossa Canção • O Som do Seu Abraço</span>
-            <span class="song-artist">Tocando sem parar no meu coração</span>
-          </div>
-          <div class="sound-wave">
-            <span></span><span></span><span></span><span></span>
-          </div>
-        </div>
-
-        <div class="post-time">POSTADO COM TODO AMOR DO MUNDO • ETERNO</div>
+        <div class="post-time">TOCANDO NOSSA MÚSICA FAVORITA • HOJE E SEMPRE</div>
       </div>
 
       <!-- Interactive Button to Open Love Letter -->
@@ -176,14 +239,18 @@
     <div class="letter-card">
       <button class="close-modal" id="closeLetterBtn">&times;</button>
       <div class="letter-stamp">❤️</div>
-      <h2 class="letter-title">Para a pessoa mais especial deste mundo,</h2>
+      <h2 class="letter-title">Para a pessoa mais especial da minha vida,</h2>
       
       <div class="letter-body">
+        <p class="letter-lyric-highlight">
+          "Quem passou por minha vida, hoje eu sei, posso falar: que não me fez sentir o que eu agora sinto por você... E por mais que eu procure, eu sei que não vou achar outra pessoa que me faça sonhar." ✨
+        </p>
+        
         <p>Queria ter mil formas e todas as palavras do dicionário para expressar o tamanho do que sinto por você, mas ainda assim pareceria pouco.</p>
         
-        <p>Eu te amo muito. Amo o seu jeito, o seu olhar, esse seu sorriso que me desmonta e a paz que sinto toda vez que estou com você. Meu maior desejo é caminhar lado a lado com você em cada vitória, te acolher em cada dia difícil e comemorar cada momento bom.</p>
+        <p>Eu te amo muito. Amo o seu jeito, o seu olhar, esse seu sorriso lindo que me desmonta por inteiro e a paz que sinto toda vez que estou com você. Meu maior desejo é caminhar lado a lado com você em cada vitória, te acolher em cada dia difícil e comemorar cada momento bom.</p>
         
-        <p>Prometo estar sempre aqui: te apoiando, te cuidando, te ouvindo e te amando mais a cada dia que passa. Você transformou a minha vida num lugar muito mais bonito.</p>
+        <p>Prometo estar sempre aqui: te apoiando, te cuidando, te ouvindo e te amando mais a cada dia que passa. Você transformou a minha vida num lugar muito mais colorido e feliz.</p>
         
         <p class="letter-sign">Com todo o meu amor e carinho,<br><strong>Sempre Seu. ❤️</strong></p>
       </div>
@@ -194,8 +261,38 @@
     </div>
   </div>
 
+  <!-- VIDEO CLIP MODAL (LIGHTBOX VIP) -->
+  <div class="video-modal-overlay" id="clipModal">
+    <div class="video-modal-card">
+      <div class="video-modal-header">
+        <div class="video-title-wrap">
+          <span class="video-tag">VÍDEO OFICIAL</span>
+          <h3 class="video-heading">Desejo de Menina • Primeiro Amor</h3>
+        </div>
+        <button class="close-video-modal" id="closeClipBtn" aria-label="Fechar clipe">&times;</button>
+      </div>
+
+      <div class="video-frame-wrap">
+        <iframe id="clipIframe" 
+          src="" 
+          title="Desejo de Menina - Primeiro Amor" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="video-modal-footer">
+        <p>Curtindo o clipe ao seu lado! 💖🍿</p>
+      </div>
+    </div>
+  </div>
+
   <!-- Notification Toast -->
   <div class="toast" id="toast">Mensagem enviada com carinho! ✨</div>
+
+  <!-- Real Audio Engine -->
+  <audio id="audioPlayer" src="musica.mp3" preload="auto" loop></audio>
 
   <script src="script.js"></script>
 </body>
